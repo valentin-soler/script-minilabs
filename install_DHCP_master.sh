@@ -6,7 +6,7 @@ apt install -y isc-dhcp-server
 # Configuration du serveur DHCP
 cat > /etc/dhcp/dhcpd.conf <<EOF
 option domain-name "linuxisgood.local";
-option domain-name-servers 192.168.15.253 192.168.15.252;
+option domain-name-servers 192.168.15.253, 192.168.15.252;
 
 default-lease-time 600;
 max-lease-time 7200;
