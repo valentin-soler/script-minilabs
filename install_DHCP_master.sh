@@ -35,7 +35,7 @@ failover peer "dhcp-failover" {
 }
 EOF
 
-echo 'INTERFACESv4="eth0"' > /etc/default/isc-dhcp-server
+echo 'INTERFACESv4="ens33"' > /etc/default/isc-dhcp-server
 
 systemctl restart isc-dhcp-server
 systemctl enable isc-dhcp-server
