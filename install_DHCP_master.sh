@@ -16,7 +16,7 @@ authoritative;
 subnet 192.168.15.0 netmask 255.255.255.0 {
     range 192.168.15.100 192.168.15.150;
     option routers 192.168.15.254;
-    option domain-name-servers 192.168.15.253 192.168.15.252;
+    option domain-name-servers 192.168.15.253, 192.168.15.252;
     option domain-name "linuxisgood.local";
 }
 
@@ -28,7 +28,7 @@ failover peer "dhcp-failover" {
     peer address 192.168.15.252;
     peer port 847;
     max-response-delay 60;
-    max-unacked-update 10;
+    max-unacked-updates 10;
     mclt 300;
     split 128;
     load balance max seconds 3;
